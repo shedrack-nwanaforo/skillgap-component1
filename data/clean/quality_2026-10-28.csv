@@ -1,0 +1,4 @@
+stage,rows,duplicate_job_id_rate,exact_duplicate_text_rate,near_duplicate_rate,missing_employer,missing_actual_salary,missing_contract_time,missing_contract_type,missing_local_authority,missing_postcode,missing_lat_lon,stale_share,outside_scotland
+raw,24865,0.0001,0.0109,,0.0025,0.4724,0.4591,0.4621,0.0161,1.0,0.0403,0.1111,18
+clean,24575,0.0,0.0,0.1888,0.0025,0.4739,0.4593,0.4614,0.0159,1.0,0.0405,0.111,0
+clean_excluding_near_dups,19936,0.0,0.0,0.0,0.0029,0.4656,0.4493,0.4681,0.0189,1.0,0.0444,0.0952,0

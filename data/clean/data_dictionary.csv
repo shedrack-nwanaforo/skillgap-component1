@@ -1,0 +1,37 @@
+field,description
+job_id,Adzuna advert id (unique key)
+source,Data source (adzuna)
+title_raw,Job title as published
+title_clean,Lower-case title without bracketed text or symbols
+description,"Advert snippet (Adzuna truncates to ~500 chars); HTML, emails, phones and URLs removed"
+employer,Employer display name
+employer_key,Normalised employer fingerprint for matching
+is_agency,True if employer name looks like a recruitment agency
+location_raw,Location as published
+area_country,Adzuna geography level 1
+area_region,Adzuna geography level 2 (Scotland)
+local_authority,Adzuna geography level 3 (mostly council area); map to SDS College Region / ITL3 downstream
+area_town,Adzuna geography level 4
+area_district,Adzuna geography level 5
+geo_level,Number of geography levels given (1 = country only)
+postcode,"Scottish postcode found in the location text, if any"
+latitude,Latitude
+longitude,Longitude
+category_tag,Adzuna category tag
+category_label,Adzuna category label
+category_query,Category used in the API query that returned the advert
+contract_type,permanent / contract
+contract_time,full_time / part_time
+salary_min,Minimum salary (GBP per year)
+salary_max,Maximum salary (GBP per year)
+salary_is_predicted,True if Adzuna estimated the salary rather than the advert stating it
+date_posted,Advert creation date (UTC)
+age_days,Days between date_posted and snapshot
+is_stale,True if older than 90 days at snapshot
+redirect_url,Link to original advert
+snapshot,Collection date (YYYY-MM-DD)
+text_hash,SHA-1 of title + description + location (exact-duplicate key)
+near_dup_group,job_id of the earliest advert in its MinHash near-duplicate cluster
+is_near_dup,True if Jaccard >= 0.85 with an earlier advert (exclude for counts)
+first_seen,First snapshot containing the advert (postings_all only)
+last_seen,Latest snapshot containing the advert (postings_all only)
